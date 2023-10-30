@@ -6,10 +6,10 @@
    
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-   // Wenn das aktuelle Zeichen ein 'e' ist, hänge nichts an die
+   // Wenn aktuelles Zeichen ein 'e' ist, hänge nichts an
   if (currentElement === 'e') {
     result.push("")
-    // Wenn das aktuelle Zeichen 'E' ist, hänge nichts an die
+    // Wenn aktuelles Zeichen 'E' ist, hänge nichts an
   }else if ( currentElement === 'E'){
    
   }else {
@@ -44,6 +44,7 @@ export function aufgabe03(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //alle e sollen gelöscht werden
     if (currentElement === 'e'){
       result.push (currentElement)
     }
