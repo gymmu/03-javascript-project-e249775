@@ -39,15 +39,31 @@ export function aufgabe02(args) {
 export function aufgabe03(args) {
   const input = args
   const result = []
-
+let count = 0
 
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //alle e sollen gelöscht werden
     if (currentElement === 'e'){
-      result.push (currentElement)
+      count = count + 1
+      
     }
+    else if (currentElement === 'E')
+    count = count +1
+  }
+  return count
+}
+
+
+export function aufgabe02(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const capitalizedElement = currentElement.toUpperCase ()
+    result.push (capitalizedElement)
 
   }
   return result.join("")
