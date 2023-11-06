@@ -92,8 +92,35 @@ export function aufgabe05(args) {
     } else if (currentElement === " ") {
 
     }
-    else if (currentElement === currentElement.toUpperCase()) {
+    else if (currentElement !== currentElement.toLowerCase()) {
+      capitalLetters++
+    }
+  }
 
+  if (capitalLetters> 0) {
+    return true
+  }else {
+    return false
+  }
+  
+}
+
+// Aufgabe 6
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+  let capitalLetters = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input [i]
+    if (currentElement === ".") {
+
+    } else if (currentElement === " ") {
+
+    }
+    else if (currentElement !== currentElement.toLowerCase()) {
+      capitalLetters++
     }
   }
 
