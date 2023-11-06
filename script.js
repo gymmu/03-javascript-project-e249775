@@ -114,11 +114,12 @@ export function aufgabe06(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    if (currentElement === ".") {
+    if (currentElement !== ".") {
 
-    } else if (currentElement === " ") {
+    } if (currentElement !== " ") {
 
     }
+    
     else if (currentElement !== currentElement.toLowerCase()) {
       capitalLetters++
     }
