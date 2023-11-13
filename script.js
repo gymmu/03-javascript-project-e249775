@@ -133,7 +133,28 @@ export function aufgabe06(args) {
   
 }
 
- // Aufgabe 11
+
+
+ // Aufgabe 09
+
+export function aufgabe09 (args) {
+  const input = args
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+    len++
+  }
+  if (len === 6) {
+  return true
+  } else{
+    return false
+  }
+
+ 
+}
+
+
+
+// Aufgabe 11
 export function aufgabe11(args) {
   const input = args
   const result = []
@@ -154,21 +175,17 @@ export function aufgabe11(args) {
 
 
 
+ // Aufgabe 12
 
-
- // Aufgabe 09
-
-export function aufgabe09 (args) {
+ export function aufgabe12 (args) {
   const input = args
-  let len = 0
-  for (let i = 0; i < input.length; i++) {
-    len++
-  }
-  if (len === 6) {
-  return true
-  } else{
-    return false
+
+   for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      return i
+    }
   }
 
- 
-}
+  return -1
+ } 
