@@ -183,7 +183,7 @@ export function aufgabe11(args) {
    for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') { // erkennt e
-      return i
+      return i // bricht die Funktion ab, wenn er e enkennt
     }
   }
 
@@ -191,14 +191,38 @@ export function aufgabe11(args) {
  } 
 
 
- 
+
   // Aufgabe 13
   export function aufgabe13 (args) {
     const input = args
     const result = []
+    let pos = -1 // zählt die Positionen
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
+     if (currentElement === 'e') {
+      pos = i
+     }
+    }
+    return pos // gibt die Position zurück, wenn kein e vorkommt
+  }
+
+
+
+
+   // Aufgabe 14
+   export function aufgabe14 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === 'e') { // erkennt e
+        return -1 // macht -1 in den OUtput, wenn er keine e findet
+      }
       
     }
-    return -1 // gibt -1 zurück, wenn kein e vorkommt
-  }
+
+
+
+
+    return result.join("")
+   }
