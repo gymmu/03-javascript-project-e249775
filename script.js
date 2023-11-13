@@ -132,10 +132,17 @@ export function aufgabe06(args) {
   }
   
 }
+
+ // Aufgabe 11
 export function aufgabe11(args) {
   const input = args
   const result = []
-  let ascii = -1
+  let ascii = null
+
+  if ( input.length > 1) { // Funktionswächter
+    return null
+  }
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     ascii = currentElement.charCodeAt(0)
@@ -149,13 +156,7 @@ export function aufgabe11(args) {
 
 
 
-
-
-
-
-
-
-
+ // Aufgabe 09
 
 export function aufgabe09 (args) {
   const input = args
