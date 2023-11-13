@@ -132,3 +132,42 @@ export function aufgabe06(args) {
   }
   
 }
+export function aufgabe11(args) {
+  const input = args
+  const result = []
+  let ascii = -1
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    ascii = currentElement.charCodeAt(0)
+    return ascii
+  }
+  return null
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export function aufgabe09 (args) {
+  const input = args
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+    len++
+  }
+  if (len === 6) {
+  return true
+  } else{
+    return false
+  }
+
+ 
+}
