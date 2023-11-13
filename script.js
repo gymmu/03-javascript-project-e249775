@@ -189,3 +189,14 @@ export function aufgabe11(args) {
 
   return -1
  } 
+
+  // Aufgabe 13
+  export function aufgabe13 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return -1 // gibt -1 zurück, wenn kein e vorkommt
+  }
