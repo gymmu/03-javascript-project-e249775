@@ -28,8 +28,8 @@ export function aufgabe02(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const capitalizedElement = currentElement.toUpperCase ()
-    result.push (capitalizedElement)
+    const capitalizedElement = currentElement.toUpperCase () // schreibt Buchstaben gross
+    result.push (capitalizedElement) // schreibt die grossbuschstaben in den Output
 
   }
   return result.join("")
@@ -87,17 +87,17 @@ export function aufgabe05(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    if (currentElement === ".") {
+    if (currentElement === ".") { // erkennt punkte
 
-    } else if (currentElement === " ") {
+    } else if (currentElement === " ") { // erkennt leerzeichen
 
     }
-    else if (currentElement !== currentElement.toLowerCase()) {
+    else if (currentElement !== currentElement.toLowerCase()) { // erkennt gross und kleinbuchstaben
       capitalLetters++
     }
   }
 
-  if (capitalLetters> 0) {
+  if (capitalLetters> 0) { // setzt nur die Grossbuschtaben in den Output
     return true
   }else {
     return false
@@ -114,9 +114,9 @@ export function aufgabe06(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    if (currentElement !== ".") {
-
-    } if (currentElement !== " ") {
+    if (currentElement !== ".") { // erkennt den Punkt nicht als Sonderzeichen
+ 
+    } if (currentElement !== " ") { // erkennt das Leerzeichen nicht als Sonderzeichen
 
     }
     
@@ -139,13 +139,13 @@ export function aufgabe06(args) {
 
 export function aufgabe09 (args) {
   const input = args
-  let len = 0
+  let len = 0 // setzt den Zähler auf Null
   for (let i = 0; i < input.length; i++) {
-    len++
+    len++ // erhöht den Zähler jeweils
   }
-  if (len === 6) {
+  if (len === 6) { // falls die Länge 6 beträgt, soll er true antworten
   return true
-  } else{
+  } else{ // wenn die Länge nicht 6 beträgt, antwortet er false
     return false
   }
 
@@ -182,14 +182,16 @@ export function aufgabe11(args) {
 
    for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'e') {
+    if (currentElement === 'e') { // erkennt e
       return i
     }
   }
 
-  return -1
+  return -1 // gibt null zurück, wenn er keine e im Input findet
  } 
 
+
+ 
   // Aufgabe 13
   export function aufgabe13 (args) {
     const input = args
