@@ -209,6 +209,15 @@ export function aufgabe11(args) {
 
 
 
-  // Aufgabe 14.2
 
- 
+ // Aufgabe 14
+ export function aufgabe14 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {// erkennt e
+      return 2}  // macht -1 in den OUtput, wenn er keine e findet
+   return -1
+    }  
+  }
