@@ -244,3 +244,19 @@ export function aufgabe07(args) {
   return false
 }
   
+// AUfgabe 20
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === '.') {
+      if (input[i+1] === ' ') {
+          return true
+        }
+      }
+    } 
+  return false
+  }
+  
