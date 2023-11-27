@@ -294,4 +294,16 @@ export function aufgabe20 (args) {
    
     return result.join("")
   }
-  
+
+  //Aufgabe 22
+
+  export function aufgabe22 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    }
+    if (i === 'k') {
+    return true
+    }
+  }
