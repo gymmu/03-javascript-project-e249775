@@ -224,3 +224,23 @@ export function aufgabe11(args) {
   }
 return -1
 } 
+  
+
+// Aufgabe 7
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'u') {
+      if (input[i+1] === 'n') {
+        if (input[i+2] === 'd') {
+          return true
+        }
+      }
+    } 
+  }
+  return false
+}
+  
