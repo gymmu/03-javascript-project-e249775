@@ -244,7 +244,7 @@ export function aufgabe07(args) {
   return false
 }
   
-// AUfgabe 20
+// Aufgabe 20
 
 export function aufgabe20 (args) {
   const input = args
@@ -260,3 +260,22 @@ export function aufgabe20 (args) {
   return false
   }
   
+   // Aufgabe 15
+
+  export function aufgabe15 (args) {
+    const input = args
+    const result = []
+   
+   
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+     
+   
+  if (currentElement === " ") {
+    return result.join("")
+  }
+  result.push(currentElement)
+    }
+  return result.join("")
+   
+  }
