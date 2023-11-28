@@ -307,3 +307,22 @@ export function aufgabe20 (args) {
     return true
     }
   }
+
+  //Aufgabe 26
+
+export function aufgabe26 (args) {
+const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+for (let i = 0; i < list.length - 1; i++) {
+  const currentElement = list[i]
+  const nextElement = list[i+1]
+  if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+    const tmp = list[i+1]
+    list[i+1] = list[i]
+    list[i] = tmp
+    i = 0 // starte von vorne wenn etwas vertauscht wurde.
+  }
+}
+const result = list.join("")
+return result
+}
