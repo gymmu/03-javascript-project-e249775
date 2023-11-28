@@ -58,24 +58,21 @@ let count = 0
 }
 
 // Aufgabe 4
-export function aufgabe04(args) {
-  const input = args
-  const result = []
-let count = 0
 
+export function aufgabe04(args) {
+  const input = args;
+  let count = 0;
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentElement = input[i];
     
-    if (currentElement === 'e'){
-      count = count + 1
-     
+    if (currentElement === ' ') {
+      count = count + 1;
     }
-    else if (currentElement.number)
-    count = count +1
- 
   }
-  return count
+  count = count + 1;
+  
+  return count;
 }
 
 // Aufgabe 5
@@ -326,3 +323,23 @@ for (let i = 0; i < list.length - 1; i++) {
 const result = list.join("")
 return result
 }
+
+// Aufgabe 27
+
+export function aufgabe27 (args) {
+  const input = args
+  const result = []
+  //falls es keine Eingabe hat, wird es direkt zurückgegeben.
+  if (input.length===0){return false}
+  for (let i = 0; i < input.length; i++) {
+   
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57){
+ 
+  }
+else  return false
+}
+return true
+}
+ 
