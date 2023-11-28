@@ -66,11 +66,11 @@ export function aufgabe04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i];
     
-    if (currentElement === ' ') {
+    if (currentElement === ' ') { // wenn das element ein Leerezeichen ist, wird der Zähler um eins erhöht.
       count = count + 1;
     }
   }
-  count = count + 1;
+  count = count + 1; // am Ende wird der Zähler noch um eins erhöht, damit das letze Wort auch gezählt wird
   
   return count;
 }
@@ -84,9 +84,9 @@ export function aufgabe05(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    if (currentElement === ".") { // erkennt punkte
+    if (currentElement === ".") { // erkennt Punkte
 
-    } else if (currentElement === " ") { // erkennt leerzeichen
+    } else if (currentElement === " ") { // erkennt Leerzeichen
 
     }
     else if (currentElement !== currentElement.toLowerCase()) { // erkennt gross und kleinbuchstaben
@@ -122,7 +122,7 @@ export function aufgabe06(args) {
     }
   }
 
-  if (capitalLetters> 0) {
+  if (capitalLetters> 0) { // wenn es grossbuchstaben sind, ist es true, sonst falsch
     return true
   }else {
     return false
@@ -213,7 +213,7 @@ export function aufgabe11(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {// erkennt e
-      count = count + 1
+      count = count + 1 // wenn es ein e ist, wird er zähler um eins erhöht
       if (count === 3){
         return i
       }
@@ -230,15 +230,15 @@ export function aufgabe07(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'u') {
-      if (input[i+1] === 'n') {
-        if (input[i+2] === 'd') {
-          return true
+    if (currentElement === 'u') { // erkennt u
+      if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
+        if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
+          return true // wenn das alles zutrifft, ist es true
         }
       }
     } 
   }
-  return false
+  return false // wennn nicht ist es false
 }
   
 // Aufgabe 20
@@ -248,13 +248,13 @@ export function aufgabe20 (args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === '.') {
-      if (input[i+1] === ' ') {
-          return true
+    if (currentElement === '.') { // erkennt punkt
+      if (input[i+1] === ' ') { // erkennt einen leerschlag wenn er auf den punkt folgt
+          return true // wenn das zutrifft, gibt er true zurück
         }
       }
     } 
-  return false
+  return false // wenn nicht sagt er false
   }
   
    // Aufgabe 15
@@ -262,13 +262,9 @@ export function aufgabe20 (args) {
   export function aufgabe15 (args) {
     const input = args
     const result = []
-   
-   
-    for (let i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-     
-   
-  if (currentElement === " ") {
+  if (currentElement === " ") { // erkennt einen leerschlag
     return result.join("")
   }
   result.push(currentElement)
@@ -360,3 +356,23 @@ export function aufgabe08 (args) {
   }
   return result.join("")
 }
+
+// BubbleSort
+export function bubbleSort (args) {
+{
+    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+        // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+        const tmp = list[i+1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = 0 // starte von vorne wenn etwas vertauscht wurde.
+      }
+    }
+    const result = list.join("")
+    return result
+    }
+  }
