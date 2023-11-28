@@ -230,10 +230,24 @@ export function aufgabe07(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'u') { // erkennt u
+    if (currentElement == 'u') { // erkennt u
       if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
         if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
           return true // wenn das alles zutrifft, ist es true
+        }
+      }
+    }
+    if (currentElement === 'U') { // erkennt u
+      if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
+        if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
+          return true// wenn das alles zutrifft, ist es true
+        }
+      }
+    }
+    if (currentElement === 'U') { // erkennt u
+      if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
+        if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
+          return false // wenn das alles zutrifft, ist es true
         }
       }
     } 
