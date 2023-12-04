@@ -152,7 +152,7 @@ export function aufgabe11(args) {
   let ascii = null
 
   if ( input.length > 1) { // Funktionswächter
-    return null
+    return null // wenn der Inut ein zeichen lang ist, gibt er null zurück
   }
 
   for (let i = 0; i < input.length; i++) {
@@ -401,5 +401,5 @@ export function aufgabe08 (args) {
           const result = list.join("")
           return result // in den Output tut er die sortierte Liste
           }
-        }
-      
+  }
+  
