@@ -105,30 +105,24 @@ export function aufgabe05(args) {
 // Aufgabe 6
 
 export function aufgabe06(args) {
-  const input = args
-  const result = []
-  let capitalLetters = 0
+  const input = args; //Diese Aufgabe soll testen, ob in der Eingabe ein Sonderzeichen vorkommt.
 
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input [i]
-    if (currentElement !== ".") { // erkennt den Punkt nicht als Sonderzeichen
- 
-    } if (currentElement !== " ") { // erkennt das Leerzeichen nicht als Sonderzeichen
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i] ;
+  const ascii = currentElement.charCodeAt(0)
 
-    }
-    
-    else if (currentElement !== currentElement.toLowerCase()) {
-      capitalLetters++
-    }
-  }
-
-  if (capitalLetters> 0) { // wenn es grossbuchstaben sind, ist es true, sonst falsch
-    return true
+  if (65 <= ascii && ascii <= 90) {
+    //Prüft, ob es sich hier um einen Grossbuchstaben handelt.
+  } else if (97 <= ascii && ascii <=122) {
+    //Prüft, ob es sich hier um einen Kleinbuchstaben handelt.
+  } else if (currentElement === ' ') {
   }else {
-    return false
+    return true
   }
-  
 }
+return false
+}
+
 
 
 
@@ -371,26 +365,6 @@ export function aufgabe08 (args) {
   return result.join("")
 }
 
-// BubbleSort
-export function bubbleSort (args) {
-{
-    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
-    for (let i = 0; i < list.length - 1; i++) {
-      const currentElement = list[i]
-      const nextElement = list[i+1]
-      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-        // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
-        const tmp = list[i+1]
-        list[i+1] = list[i]
-        list[i] = tmp
-        i = 0 // starte von vorne wenn etwas vertauscht wurde.
-      }
-    }
-    const result = list.join("")
-    return result
-    }
-  }
-
   // Aufgabe 10
   
   export function aufgabe10(args) {
@@ -419,3 +393,25 @@ export function bubbleSort (args) {
    
     return true;
     }
+  
+    // BubbleSort
+
+    export function bubbleSort (args) {
+      {
+          const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+          for (let i = 0; i < list.length - 1; i++) {
+            const currentElement = list[i]
+            const nextElement = list[i+1]
+            if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+              // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+              const tmp = list[i + 1];
+              list[i + 1] = list[i];
+              list[i] = tmp;
+              i = -1 // starte von vorne wenn etwas vertauscht wurde.
+            }
+          }
+          const result = list.join("")
+          return result
+          }
+        }
+      
