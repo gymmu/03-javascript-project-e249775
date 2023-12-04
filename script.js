@@ -105,16 +105,16 @@ export function aufgabe05(args) {
 // Aufgabe 6
 
 export function aufgabe06(args) {
-  const input = args; //Diese Aufgabe soll testen, ob in der Eingabe ein Sonderzeichen vorkommt.
+  const input = args; 
 
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i] ;
   const ascii = currentElement.charCodeAt(0)
 
   if (65 <= ascii && ascii <= 90) {
-    //Prüft, ob es sich hier um einen Grossbuchstaben handelt.
+    //Prüft ob es ein Grossbuchstabe ist
   } else if (97 <= ascii && ascii <=122) {
-    //Prüft, ob es sich hier um einen Kleinbuchstaben handelt.
+    //Prüft, ob es ein Kleinbuchstabe ist
   } else if (currentElement === ' ') {
   }else {
     return true
@@ -231,17 +231,17 @@ export function aufgabe07(args) {
         }
       }
     }
-    if (currentElement === 'U') { // erkennt u
-      if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
-        if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
+    if (currentElement === 'U') { // erkennt ein grosses U
+      if (input[i+1] === 'n') { // erkennet ein n wenn es auf das U folgt
+        if (input[i+2] === 'd') { // erkennt das d wenn es auf das U und n folgt
           return true// wenn das alles zutrifft, ist es true
         }
       }
     }
-    if (currentElement === 'U') { // erkennt u
+    if (currentElement === 'U') { // erkennt U
       if (input[i+1] === 'n') { // erkennet ein n wenn es auf das u folgt
         if (input[i+2] === 'd') { // erkennt das d wenn es auf das u und n folgt
-          return false // wenn das alles zutrifft, ist es true
+          return false // wenn das alles zutrifft, ist es false
         }
       }
     } 
@@ -273,7 +273,7 @@ export function aufgabe20 (args) {
   for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
   if (currentElement === " ") { // erkennt einen leerschlag
-    return result.join("")
+    return result.join("") // bricht die Funktion ab, wenn es einen leerschlag erkennt
   }
   result.push(currentElement)
     }
@@ -288,40 +288,28 @@ export function aufgabe20 (args) {
     const result = []
    
     for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-      //zu dem Element wird das gleiche Element nochmals angesetzt.
+      const currentElement = input[i] //zu dem currentElement wird das gleiche Element dahinter gesetzt
       result.push(currentElement + currentElement )
     }
    
     return result.join("")
   }
 
-  //Aufgabe 22
 
-  export function aufgabe22 (args) {
-    const input = args
-    const result = []
-    for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-    }
-    if (i === 'k') {
-    return true
-    }
-  }
 
   //Aufgabe 26
 
 export function aufgabe26 (args) {
-const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+const list = args.split("") 
 for (let i = 0; i < list.length - 1; i++) {
   const currentElement = list[i]
   const nextElement = list[i+1]
   if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-    // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+    // Reihenfolge stimmt nicht heisst die Elemente werden getauscht
     const tmp = list[i+1]
     list[i+1] = list[i]
     list[i] = tmp
-    i = 0 // starte von vorne wenn etwas vertauscht wurde.
+    i = 0 // funktion startet von vorne
   }
 }
 const result = list.join("")
@@ -333,18 +321,18 @@ return result
 export function aufgabe27 (args) {
   const input = args
   const result = []
-  //falls es keine Eingabe hat, wird es direkt zurückgegeben.
+  
   if (input.length===0){return false}
   for (let i = 0; i < input.length; i++) {
    
     const currentElement = input[i]
     const ascii = currentElement.charCodeAt(0)
     if (48 <= ascii && ascii <= 57){
- 
+  // erkennt ASCII werte zwischen 0 und 9
   }
-else  return false
+else  return false // wenn er keine findet, ist es false
 }
-return true
+return true // wenn er zeichen von 0 bis 9 findet, ist es true
 }
  
 // Aufgabe 8
@@ -356,10 +344,10 @@ export function aufgabe08 (args) {
  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-     if (currentElement === 'e') {
-  result.push('3')
+     if (currentElement === 'e') { // erkennt e
+  result.push('3') // wenn es e erkennt, wird es mit 3 ersetzt
   }else{
-    result.push(currentElement)
+    result.push(currentElement) // der nun geänderte output wird so zurückgegeben
   }
   }
   return result.join("")
@@ -371,47 +359,47 @@ export function aufgabe08 (args) {
     const input = args;
    
     if (input.length !== 7) {
-    return false;
+    return false; // wenn der Input nicht 7 zeichen lang ist, gibt er false zurück
     }
    
     if (input[0] !== "#") {
-    return false;
-    }
+    return false; // wenn der input kein # enthält, gibt er false zurück
+    } 
    
     for (let i = 1; i < input.length; i++) {
     const currentElement = input[i];
-    const ascii = currentElement.charCodeAt(0);
+    const ascii = currentElement.charCodeAt(0); // er überrüft den ASCII wert
    
     if (48 <= ascii && ascii <= 57) {
-    // mache nichts: ist eine Zahl
+    // wenn der Wert zwischen 48 und 57 liegt, also eine zahl ist, macht er nix
     } else if (65 <= ascii && ascii <= 70) {
-    // mache nichts: ist A-F
+    // wenn der wert zwischen 65 und 70 liegt, also buschstabe ist, macht er nichts
     } else {
-    return false;
+    return false; // wenn der code etwas anderes, z.B.: ein Sonderzeichen ist, gibt er false zurück
     }
     }
    
-    return true;
+    return true; // sonst gibt er true zurück
     }
   
     // BubbleSort
 
     export function bubbleSort (args) {
       {
-          const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+          const list = args.split("") // er macht eine Liste
           for (let i = 0; i < list.length - 1; i++) {
             const currentElement = list[i]
             const nextElement = list[i+1]
             if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-              // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+              // die Reihenfolge ist falsch, er muss also tauschen
               const tmp = list[i + 1];
               list[i + 1] = list[i];
               list[i] = tmp;
-              i = -1 // starte von vorne wenn etwas vertauscht wurde.
+              i = -1 // die Funktion läuft solange weiter, bis alles in der richtigen Reihenfolge ist
             }
           }
           const result = list.join("")
-          return result
+          return result // in den Output tut er die sortierte Liste
           }
         }
       
