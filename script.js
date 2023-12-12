@@ -382,28 +382,7 @@ export function aufgabe08 (args) {
     return true; // sonst gibt er true zurück
     }
   
-    // BubbleSort
-
-
-    export function bubbleSort (args) {
-      {
-          const list = args.split("") // er macht eine Liste, damit er sortieren kann
-          for (let i = 0; i < list.length - 1; i++) {
-            const currentElement = list[i]
-            const nextElement = list[i+1]
-            if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-              // die Reihenfolge ist falsch, er muss also tauschen
-              const tmp = list[i + 1];
-              list[i + 1] = list[i];
-              list[i] = tmp;
-              i = -1 // die Funktion läuft solange weiter, bis alles in der richtigen Reihenfolge ist
-            }
-          }
-          const result = list.join("")
-          return result // in den Output tut er die sortierte Liste
-          }
-  }
-
+    
 
   // Aufgabe 17
   export function aufgabe17 (args) {
@@ -413,9 +392,6 @@ export function aufgabe08 (args) {
     if (currentElement === ','){
 
     }
-
-
-
 
 }
     return result.join("")
@@ -450,3 +426,4 @@ for (let i = 0; i < input.length; i++) {
   }
     return result.join("")
   }
+
