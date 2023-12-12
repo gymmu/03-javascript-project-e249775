@@ -382,28 +382,7 @@ export function aufgabe08 (args) {
     return true; // sonst gibt er true zurück
     }
   
-    // BubbleSort
-
-
-    export function bubbleSort (args) {
-      {
-          const list = args.split("") // er macht eine Liste, damit er sortieren kann
-          for (let i = 0; i < list.length - 1; i++) {
-            const currentElement = list[i]
-            const nextElement = list[i+1]
-            if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-              // die Reihenfolge ist falsch, er muss also tauschen
-              const tmp = list[i + 1];
-              list[i + 1] = list[i];
-              list[i] = tmp;
-              i = -1 // die Funktion läuft solange weiter, bis alles in der richtigen Reihenfolge ist
-            }
-          }
-          const result = list.join("")
-          return result // in den Output tut er die sortierte Liste
-          }
-  }
-
+    
 
   // Aufgabe 17
   export function aufgabe17 (args) {
@@ -413,9 +392,6 @@ export function aufgabe08 (args) {
     if (currentElement === ','){
 
     }
-
-
-
 
 }
     return result.join("")
@@ -428,25 +404,72 @@ export function aufgabe08 (args) {
   export function aufgabe25 (args) {
     const input = args
     const result = []
-  if (input.length % 2 === 0) {
-  const pos = input.length / 2 - 1
+  if (input.length % 2 === 0) {  // erkennt gerade Zahlen
+  const pos = input.length / 2 - 1 // erkennt ungerade Zahlen
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
-  if ( i === pos) {
-  } else if  (i === pos + 1) {
+  if ( i === pos) { // erkennt mitte 
+  } else if  (i === pos + 1) { // erkennt Mitte falls sie zwei zeichen lang ist
   }else {
     result.push (currentElement)
   }
 }
   } else {
-    const pos = Math.floor(input.length / 2)
+    const pos = Math.floor(input.length / 2)  // rundet jeweils ab
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (i === pos) {
       } else {
-        result.push (currentElement)
+        result.push (currentElement) // pusht current Element
       }
     }
   }
     return result.join("")
+  }
+
+
+// Bubble Sort
+
+  export function bubbleSort (args) {
+    {
+        const list = args.split("") // er macht eine Liste, damit er sortieren kann
+        for (let i = 0; i < list.length - 1; i++) {
+          const currentElement = list[i]
+          const nextElement = list[i+1]
+          if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+            // die Reihenfolge ist falsch, er muss also tauschen
+            const tmp = list[i + 1];
+            list[i + 1] = list[i];
+            list[i] = tmp;
+            i = -1 // die Funktion läuft solange weiter, bis alles in der richtigen Reihenfolge ist
+          }
+        }
+        const result = list.join("")
+        return result // in den Output tut er die sortierte Liste
+        }
+  }
+
+
+  // Aufgabe 23
+
+  export function aufgabe23(args) {
+    const input = args;
+    const result = [];
+ 
+    if (input.length === 0) {
+      return ''; // gibt leer zurück
+    }
+ 
+    const firstChar = input.charAt(0);
+ 
+    result.push(firstChar); // hänget erstes Zeichen an den Anfang
+ 
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i];
+      result.push(currentElement);
+    }
+ 
+    result.push(firstChar); // hängt erstes zeichen an den schluss
+ 
+    return result.join('');
   }
