@@ -448,3 +448,28 @@ for (let i = 0; i < input.length; i++) {
         return result // in den Output tut er die sortierte Liste
         }
   }
+
+
+  // Aufgabe 23
+
+  export function aufgabe23(args) {
+    const input = args;
+    const result = [];
+ 
+    if (input.length === 0) {
+      return ''; // gibt leer zurück
+    }
+ 
+    const firstChar = input.charAt(0);
+ 
+    result.push(firstChar); // hänget erstes Zeichen an den Anfang
+ 
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i];
+      result.push(currentElement);
+    }
+ 
+    result.push(firstChar); // hängt erstes zeichen an den schluss
+ 
+    return result.join('');
+  }
