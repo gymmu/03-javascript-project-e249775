@@ -44,13 +44,13 @@ let count = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //alle e sollen gelöscht werden
     
-    if (currentElement === 'e'){
+    
+    if (currentElement === 'e'){ // erkennt e
       count = count + 1
       // zählt alle kleinen e
     }
-    else if (currentElement === 'E')
+    else if (currentElement === 'E') // erkennt E
     count = count +1
   // zählt alle grossen E
   }
@@ -130,7 +130,7 @@ return false
 
 export function aufgabe09 (args) {
   const input = args
-  let len = 0 // setzt den Zähler auf Null
+  let len = 0 // fängt bei null zu zählen an
   for (let i = 0; i < input.length; i++) {
     len++ // erhöht den Zähler jeweils
   }
@@ -152,7 +152,7 @@ export function aufgabe11(args) {
   let ascii = null
 
   if ( input.length > 1) { // Funktionswächter
-    return null // wenn der Inut ein zeichen lang ist, gibt er null zurück
+    return null // wenn der Input länger als ein zeichen lang ist, gibt er null zurück
   }
 
   for (let i = 0; i < input.length; i++) {
@@ -209,7 +209,7 @@ export function aufgabe11(args) {
     if (currentElement === 'e') {// erkennt e
       count = count + 1 // wenn es ein e ist, wird er zähler um eins erhöht
       if (count === 3){
-        return i
+        return i // wenn der zähler bei drei ist und er noch ein e findet, gibt er i zurück
       }
     }
   }
@@ -384,9 +384,10 @@ export function aufgabe08 (args) {
   
     // BubbleSort
 
+
     export function bubbleSort (args) {
       {
-          const list = args.split("") // er macht eine Liste
+          const list = args.split("") // er macht eine Liste, damit er sortieren kann
           for (let i = 0; i < list.length - 1; i++) {
             const currentElement = list[i]
             const nextElement = list[i+1]
@@ -402,4 +403,50 @@ export function aufgabe08 (args) {
           return result // in den Output tut er die sortierte Liste
           }
   }
-  
+
+
+  // Aufgabe 17
+  export function aufgabe17 (args) {
+    const list = args.split("") 
+    for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ','){
+
+    }
+
+
+
+
+}
+    return result.join("")
+  }
+
+
+
+// Aufgabe 25
+
+  export function aufgabe25 (args) {
+    const input = args
+    const result = []
+  if (input.length % 2 === 0) {
+  const pos = input.length / 2 - 1
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  if ( i === pos) {
+  } else if  (i === pos + 1) {
+  }else {
+    result.push (currentElement)
+  }
+}
+  } else {
+    const pos = Math.floor(input.length / 2)
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (i === pos) {
+      } else {
+        result.push (currentElement)
+      }
+    }
+  }
+    return result.join("")
+  }
