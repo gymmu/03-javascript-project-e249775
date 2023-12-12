@@ -404,23 +404,23 @@ export function aufgabe08 (args) {
   export function aufgabe25 (args) {
     const input = args
     const result = []
-  if (input.length % 2 === 0) {
-  const pos = input.length / 2 - 1
+  if (input.length % 2 === 0) {  // erkennt gerade Zahlen
+  const pos = input.length / 2 - 1 // erkennt ungerade Zahlen
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
-  if ( i === pos) {
-  } else if  (i === pos + 1) {
+  if ( i === pos) { // erkennt mitte 
+  } else if  (i === pos + 1) { // erkennt Mitte falls sie zwei zeichen lang ist
   }else {
     result.push (currentElement)
   }
 }
   } else {
-    const pos = Math.floor(input.length / 2)
+    const pos = Math.floor(input.length / 2)  // rundet jeweils ab
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (i === pos) {
       } else {
-        result.push (currentElement)
+        result.push (currentElement) // pusht current Element
       }
     }
   }
